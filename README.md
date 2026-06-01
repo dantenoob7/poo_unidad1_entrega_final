@@ -52,7 +52,7 @@ Relaciones entre Clases
 
 Herencia:
 
-Película, SerieDeTV, Documental, VideoYouTube y Cortometraje heredan de ContenidoAudiovisual
+Película, SerieDeTV, Documental, Podcast y Audiolibro heredan de ContenidoAudiovisual
 
 Asociación:
 
@@ -113,6 +113,74 @@ Mejoras implementadas
 -Código organizado y modular
 -Proyecto funcional y listo para ejecución
 -Actualización de documentación.
+
+
+*Nuevas Funcionalidades Implementadas*
+
+-Manejo de Archivos
+
+Se implementó la clase `ArchivoContenido`, la cual permite:
+
+-Guardar información de contenidos audiovisuales en archivos CSV.
+-Leer información almacenada desde archivos CSV.
+-Persistir los datos generados por el sistema.
+
+-Aplicación del Patrón MVC
+
+Se incorporó una arquitectura Modelo-Vista-Controlador (MVC):
+
+Modelo (Model): ContenidoAudiovisual, Pelicula, SerieDeTV, Documental, Podcast, Audiolibro, Actor, Temporada e Investigador.
+Vista (View):** VistaConsola.
+Controlador (Controller):** ControladorContenido.
+
+Esta estructura mejora la organización y mantenibilidad del sistema.
+
+*Pruebas Unitarias*
+
+Se implementaron pruebas unitarias utilizando JUnit para verificar el correcto funcionamiento de las clases principales del proyecto.
+
+Pruebas desarrolladas:
+
+* PeliculaTest
+* SerieDeTVTest
+* DocumentalTest
+
+Las pruebas verifican atributos, constructores y métodos de las clases principales.
+
+Estructura Actual del Proyecto
+
+src/
+
+* poo/ Clase principal (PruebaAudioVisual)
+* uni1a/  Clases del modelo y manejo de archivos
+* mvc/  Implementación del patrón MVC
+
+test/
+
+-PeliculaTest.java
+-SerieDeTVTest.java
+-DocumentalTest.java
+
+*Ejecución de Pruebas*
+
+Para ejecutar las pruebas unitarias:
+
+1. Abrir el proyecto en Eclipse.
+2. Ir a la carpeta "test".
+3. Seleccionar la clase de prueba deseada.
+4. Clic derecho → Run As → JUnit Test.
+5. Verificar que las pruebas finalicen con barra verde y sin errores.
+
+*Mejoras Implementadas*
+
+* Incorporación de clases Actor, Temporada e Investigador.
+* Incorporación de nuevas subclases Podcast y Audiolibro.
+* Implementación de manejo de archivos CSV.
+* Aplicación de principios de Programación Orientada a Objetos.
+* Implementación del patrón MVC.
+* Desarrollo de pruebas unitarias con JUnit.
+* Actualización del diagrama de clases.
+* Organización y refactorización del código.
 
 
 Autor
