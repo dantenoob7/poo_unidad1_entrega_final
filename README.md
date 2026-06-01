@@ -112,6 +112,7 @@ Mejoras implementadas
 -Implementación de relaciones POO completas
 -Código organizado y modular
 -Proyecto funcional y listo para ejecución
+-Actualización de documentación.
 
 
 Autor
