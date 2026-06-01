@@ -1,9 +1,16 @@
 package poo;
+
 import uni1a.*;
+import mvc.*;
 
 public class PruebaAudioVisual {
 	public static void main(String[] args) {
         System.out.println("Hello from Eclipse!");
+        
+        VistaConsola vista = new VistaConsola();
+        ControladorContenido controlador = new ControladorContenido(vista);
+
+        controlador.mostrarMensaje("Sistema MVC iniciado");
 
         ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3];
 
@@ -38,5 +45,16 @@ public class PruebaAudioVisual {
         // PRUEBA DE AUDIOLIBRO
         Audiolibro audio = new Audiolibro("El Principito", 120, "Ficcion", "Antoine de Saint-Exupéry", "Juan Narrador");
         audio.mostrarDetalles();
+        
+        ArchivoContenido.guardarContenido(
+                contenidos,
+                "contenidos.csv"
+        );
+        
+        ArchivoContenido.leerContenido(
+                "contenidos.csv"
+        );
+        
     }
 }
+
